@@ -1,2 +1,2 @@
 # wpf-calculator
-Windows WPF calculator with basic arithmetic, keyboard input, and clear/reset.
+Small calculator app for Windows built with C# and WPF. Supports + − × ÷, decimals, clear, and keyboard input. Focuses on simple, readable code and a minimal UI.
