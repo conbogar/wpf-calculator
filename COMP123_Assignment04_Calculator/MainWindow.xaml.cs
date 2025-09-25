@@ -129,17 +129,6 @@ namespace COMP123_Assignment04_Calculator
                     DivideClick(sender, e); e.Handled = true; break;
                 case Key.Decimal:
                     DecimalClick(sender, e); e.Handled = true; break;
-
-                case Key.NumPad0: AppendDigit("0"); e.Handled = true; break;
-                case Key.NumPad1: AppendDigit("1"); e.Handled = true; break;
-                case Key.NumPad2: AppendDigit("2"); e.Handled = true; break;
-                case Key.NumPad3: AppendDigit("3"); e.Handled = true; break;
-                case Key.NumPad4: AppendDigit("4"); e.Handled = true; break;
-                case Key.NumPad5: AppendDigit("5"); e.Handled = true; break;
-                case Key.NumPad6: AppendDigit("6"); e.Handled = true; break;
-                case Key.NumPad7: AppendDigit("7"); e.Handled = true; break;
-                case Key.NumPad8: AppendDigit("8"); e.Handled = true; break;
-                case Key.NumPad9: AppendDigit("9"); e.Handled = true; break;
             }
         }
         private void DivideClick(object sender, EventArgs e) => AppendOperator("÷");
