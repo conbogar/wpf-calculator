@@ -64,14 +64,15 @@ namespace COMP123_Assignment04_Calculator
             if (!string.IsNullOrEmpty(input))
             {
                 input = input.Substring(0, input.Length - 1);
-                textBlock1.Text = input;
+                textBlock1.Text = input.Length > 0 ? input : "0";
             }
             else if (!string.IsNullOrEmpty(operation))
             {
                 operation = null;
-                textBlock1.Text = operand1;
+                textBlock1.Text = operand1.Length > 0 ? operand1 : "0";
             }
         }
+
         private void Window_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             if (string.IsNullOrEmpty(e.Text)) return;
@@ -147,6 +148,11 @@ namespace COMP123_Assignment04_Calculator
         private void EqualsClick(object sender, EventArgs e)
         {
             operand2 = input;
+
+            if (string.IsNullOrEmpty(operation) || string.IsNullOrEmpty(input))
+            {
+                return;
+            }
 
             try
             {
